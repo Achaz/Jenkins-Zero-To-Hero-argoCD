@@ -19,7 +19,7 @@ pipeline {
                 script{
                     sh '''
                     echo 'Buid Docker Image'
-                    docker build -t mahesh8887/jenkin-ci-cd:${BUILD_NUMBER} .
+                    docker build -t laughingsquid/jenkin-ci-cd:${BUILD_NUMBER} .
                     '''
                 }
             }
@@ -30,7 +30,7 @@ pipeline {
                 script{
                     sh '''
                     echo 'Push to Repo'
-                    docker push mahesh8887/jenkin-ci-cd:${BUILD_NUMBER}
+                    docker push laughingsquid/jenkin-ci-cd:${BUILD_NUMBER}
                     '''
                 }
             }
